@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio INSERCION A LA VIDA UNIVERSITARIA - IRWING MESIAS</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #e2e8f0;
+
+    /* 👉 IMAGEN DE FONDO (CAMBIAR AQUÍ) */
+    background: linear-gradient(rgba(2,6,23,0.9), rgba(2,6,23,0.9)),
+                url("img/UNIVALLE YUMBO.jpg") no-repeat center center/cover;
+}
+
+/* HEADER */
+header {
+    background: rgba(2,6,23,0.9);
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(30,41,59,0.9);
+    padding: 12px;
+    flex-wrap: wrap;
+}
+
+nav button {
+    background: #334155;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #64748b;
+}
+/* SELECT ESTILO BOTÓN */
+nav select {
+    background: #334155;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* HOVER */
+nav select:hover {
+    background: #64748b;
+}
+
+/* SECCIONES */
+section {
+    display: none;
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.active {
+    display: block;
+}
+
+/* GALERÍA DE IMÁGENES */
+.galeria {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.galeria img {
+    width: 280px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* LINKS */
+a {
+    color: #5eb1d4;
+}
+</style>
+
+<script>
+function mostrar(seccion) {
+    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+    document.getElementById(seccion).classList.add("active");
+}
+
+function irModulo(seccion) {
+    if (seccion !== "") {
+        mostrar(seccion);
+    }
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Portafolio INSERCION A LA VIDA UNIVERSITARIA - IRWING MESIAS</h1>
+    <p>Bienvenidos a mi portafolio</p>
+</header>
+
+<nav>
+    <button onclick="mostrar('intro')">Inicio</button>
+    <button onclick="mostrar('perfil')">Perfil</button>
+    <button onclick="mostrar('universidad')">Universidad</button>
+
+    <!-- PORTAFOLIO DESPLEGABLE SIMPLE -->
+    <select onchange="irModulo(this.value)">
+        <option value="">PORTAFOLIO</option>
+        <option value="modulo1">Módulo 1</option>
+        <option value="modulo2">Módulo 2</option>
+        <option value="modulo3">Módulo 3</option>
+    </select>
+</nav>
+
+<!-- INTRO -->
+
+<section id="intro" class="active">
+<h2>Introducción</h2>
+<p>Primero quiero comenzar con lo que para mí significa inserción a la vida universitaria:
+    </p>
+<p>- La inserción a la vida universitaria la entiendo como un proceso estratégico de adaptación, donde el estudiante deja de ser un receptor pasivo y asume el rol de gestor de su propio desarrollo. No se trata solo de ingresar a una institución, sino de aprender a operar dentro de un sistema que exige disciplina, criterio y enfoque en resultados.
+Desde una visión más analítica, esta materia representa el punto de partida para construir una mentalidad orientada al crecimiento: organizar el tiempo, tomar decisiones conscientes y entender que cada acción académica tiene un impacto directo en el futuro profesional.
+En esencia, la vida universitaria funciona como un entorno de entrenamiento, donde se desarrollan habilidades que trascienden el aula, preparándonos no solo para aprobar materias, sino para competir, adaptarnos y generar valor en contextos reales.
+</p>
+
+<div class="galeria">
+    <!-- 👉 EDITA IMÁGENES -->
+    <img src="img/JARDINES.jpg">
+    <img src="img/UNIVALLE.jpg">
+</div>
+</section>
+
+<!-- PERFIL -->
+
+<section id="perfil">
+<h2>Perfil</h2>
+<p>Irwing Andrés Mesías. Padre una hermosa niña, Estudiante de filosofía, programación y profesional del área comercial, enfocado en negocios. Apasionado por la lectura, la tecnología y la escritura, combinó pensamiento crítico con acción práctica para generar valor y crecimiento continuo.</p>
+
+<div class="galeria">
+    <!-- 👉 EDITA IMÁGENES -->
+    <img src="img/IRWING.jpeg">
+    <img src="img/TRABAJANDO.jpg">
+</div>
+</section>
+
+<!-- UNIVERSIDAD -->
+
+<section id="universidad">
+<h2>La Universidad donde estudio</h2>
+<p><strong>Universidad del Valle - Sede Yumbo</strong></p>
+<p>En la carrera de:  Tecnología en Desarrollo de Software (TEDESOF)</p>
+
+<p>Descripción:  Universidad pública fundada en 1945, reconocida por su calidad académica y su aporte al desarrollo regional y nacional.</p>
+<p><strong>MISIÓN:</strong></p>
+<p>Formar profesionales competentes, críticos y comprometidos con el desarrollo sostenible, a través de una educación de calidad, investigación innovadora y extensión social que promueva la transformación de la sociedad.</p>
+<p><strong>VISIÓN:</strong></p>
+<p>Ser una universidad líder en la formación de profesionales integrales, reconocida por su excelencia académica, innovación y compromiso social, contribuyendo al desarrollo sostenible y al bienestar de la comunidad.</p>
+<p>¿Quieres saber mas sobre nuestra <strong>UNIVERSIDAD</strong>?  Visita estos enlaces:</p>
+
+<p><a href="https://planeacion.univalle.edu.co/vision-mision-y-estructura-estrategica" target="_blank">MISIÓN y VISIÓN</a></p>
+
+<!-- 👉 CAMBIA LINK -->
+
+<p><a href=" https://yumbo.univalle.edu.co/" target="_blank">Portal oficial</a></p>
+
+<div class="galeria">
+    <img src="img/JARDINES.jpg">
+    <img src="img/UNIVALLE YUMBO.jpg">
+</div>
+</section>
+
+<!-- MODULO 1 -->
+
+<section id="modulo1">
+<h2>Módulo 1</h2>
+<p>Este módulo lo entiendo como una base de autogestión. Diferenciar emociones y sentimientos, junto con el manejo del estrés 
+    (como en el ejercicio con Avicii), me permitió aterrizar cómo las decisiones y el rendimiento también pasan por el estado mental. 
+    La gestión del tiempo, especialmente en jornada nocturna, la veo como una habilidad clave para sostener disciplina y productividad. </p>
+
+<h3>Emociones vs Sentimientos</h3>
+<p>Comprendí la diferencia entre respuestas inmediatas (emociones) y estados más duraderos (sentimientos), 
+    lo que permite tomar decisiones con mayor control y criterio</p>
+<div class="galeria">
+    <!-- 👉 AGREGA MÁS SI QUIERES -->
+    <img src="img/proyecto 1 emocion vs sentimientos .png">
+    <img src="img/emovsen.png">
+    
+    
+</div>
+<h3>Manejo del estrés</h3>
+<p>AQUÍ HICE UN EJERCICIO DE PONER MI ARTISTA FAVORITO Y SELECCIONAMOS A AVICII. A través del ejercicio con Avicii, 
+    entendí cómo factores externos e internos influyen en el estrés, 
+    y la importancia de canalizarlo de forma consciente para no afectar el rendimiento. </p>
+<div class="galeria">
+    <!-- 👉 AGREGA MÁS SI QUIERES -->
+    <img src="img/proyecto 1 sem 2 debug estres.png">
+    <img src="img/avicii.jpg">
+
+</div>
+<h3>Gestión del tiempo</h3>
+<p>Aprendí a organizar mejor mis actividades, priorizando tareas y optimizando el tiempo para mantener la productividad en un contexto exigente. </p>
+<div class="galeria">
+    <!-- 👉 AGREGA MÁS SI QUIERES -->
+    <img src="img/proyecto 1 sem 3 gestion del tiempo .png">
+    <img src="img/gestiondeltiempo.jpg">
+    <img src="img/universidad3.jpg">
+</div>
+</section>
+
+<!-- MODULO 2 -->
+
+<section id="modulo2">
+<h2>Módulo 2</h2>
+<p>Más que teoría, este módulo fue entender cómo funciona el sistema. Conocer la estructura administrativa, recorrer el campus 
+    y entender el reglamento me dio claridad para moverse estratégicamente dentro de la universidad, optimizando procesos 
+    y evitando fricciones innecesarias..</p>
+
+<h3>CONOCER ADMINISTRATIVAMENTE LA UNIVERSIDAD: </h3>
+<p>Identifiqué cómo está estructurada la universidad y cómo funcionan sus procesos internos. </p>
+<div class="galeria">
+    <img src="img/proyecto 2 conociendo administrativamente la uni mision y vision .png">
+    <img src="img/univallecampus.png">
+    
+</div>
+<h3>RECORRER EL CAMPUS DE LA UNIVALLE YUMBO:</h3>
+<p>Reconocí los espacios clave, facilitando la adaptación y el desplazamiento dentro del entorno universitario. </p>
+<div class="galeria">
+    
+    <img src="img/proyecto 2 recorrido al campus.png">
+    <img src="img/univallecampus2.png">
+   
+</div>
+<h3>REGLAMENTO, NORMATIVAS, ARTÍCULOS:</h3>
+<p>Entendí las reglas del sistema, lo que permite actuar con claridad y evitar errores académicos o administrativos. </p>
+
+<div class="galeria">
+
+    <img src="img/proyecto 2 sem 3 reglamento y normativida revisar acuerdos..png">
+    <img src="img/UNIVERSIDAD1.jpg">
+    
+</div>
+</section>
+
+<!-- MODULO 3 -->
+
+<section id="modulo3">
+<h2>Módulo 3</h2>
+<p>La comunicación institucional la veo como una herramienta operativa. Saber usar correctamente correos, 
+    PQRS y canales formales no solo facilita la gestión, sino que proyecta profesionalismo y mejora la eficiencia en cualquier entorno. </p>
+<div class="galeria">
+    <img src="img/proyecto 3 comunicacion istitucional .png">
+    
+    
+</div>
+<h3>COMUNICACIÓN INSTITUCIONAL: CORREOS, PQRS, CHATS ETC:</h3>
+<p>Aprendí el uso adecuado de canales formales como correos, PQRS y chats, fortaleciendo una comunicación clara, efectiva y profesional.</p>
+
+<div class="galeria">
+    
+    <img src="img/proyecto 3 comunicacion istitucional .png">
+    <img src="img/comunivalle.png">
+</div>
+</section>
+
+</body>
+</html>
